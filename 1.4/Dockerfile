@@ -16,6 +16,8 @@ COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
+COPY proxysql.cnf /etc/proxysql.cnf
+
 EXPOSE 3306 6032
 
 CMD [""]
