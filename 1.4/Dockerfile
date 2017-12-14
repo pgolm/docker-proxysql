@@ -18,6 +18,8 @@ ENTRYPOINT ["/entrypoint.sh"]
 
 COPY proxysql.cnf /etc/proxysql.cnf
 
+VOLUME /var/lib/proxysql
+
 EXPOSE 3306 6032
 
 CMD [""]
