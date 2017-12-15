@@ -6,7 +6,7 @@ LABEL maintainer="Peter Golm <golm.peter@gmail.com>" \
       proxysql.version=$PROXYSQL_VERSION
 
 RUN apt-get update && \
-    apt-get install -y curl
+    apt-get install -y curl mysql-client
 
 RUN curl -L wget https://github.com/sysown/proxysql/releases/download/v$PROXYSQL_VERSION/proxysql_$PROXYSQL_VERSION-ubuntu16_amd64.deb > /tmp/proxysql.deb && \
     dpkg -i /tmp/proxysql.deb && \
